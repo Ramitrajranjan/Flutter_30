@@ -10,14 +10,16 @@ class MyDrawer extends StatelessWidget {
       "https://media.licdn.com/dms/image/D4D03AQFkrEQYEMUxYg/profile-displayphoto-shrink_800_800/0/1687873694910?e=2147483647&v=beta&t=zGO-hbUmLlUBotvk7NMuPCaYMMnYYjX3-8G9fvV8DxA";
     return Drawer(
       child: Container(
-        decoration: const BoxDecoration(color: Colors.deepPurple),
+        decoration: const BoxDecoration(
+          color: Colors.grey
+          ),
         child: ListView(
           children:const [
             DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
-                decoration: BoxDecoration(color: Colors.deepPurpleAccent),
+                decoration: BoxDecoration(color: Color.fromARGB(252, 140, 131, 163)),
                 accountName: Text("Ramit Ranjan",style: TextStyle(
                     color: Colors.white,
                     fontSize:16,),
@@ -27,7 +29,8 @@ class MyDrawer extends StatelessWidget {
                     fontSize:16,),
                     ),
                 currentAccountPicture: CircleAvatar(
-                  backgroundImage: NetworkImage(imageUrl),),
+                  backgroundImage: NetworkImage(imageUrl),
+                  ),
                 ),
               ),
 
@@ -39,11 +42,9 @@ class MyDrawer extends StatelessWidget {
                   title: Text(
                     "Home",
                     textScaleFactor: 1.2,
-                    style: TextStyle(
-                    color:Colors.white )
+                    style: TextStyle(color:Colors.white )
                     ),
-                
-                ),
+              ),
               ListTile(
                 leading: Icon(
                   CupertinoIcons.profile_circled,
@@ -52,10 +53,9 @@ class MyDrawer extends StatelessWidget {
                   title: Text(
                     "Profile",
                     textScaleFactor: 1.2,
-                    style: TextStyle(
-                    color:Colors.white )
+                    style: TextStyle(color:Colors.white )
                     ),
-                ),
+              ),
               ListTile(
                 leading: Icon(
                   CupertinoIcons.mail,

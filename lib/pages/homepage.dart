@@ -13,8 +13,9 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
               appBar: AppBar(
-                        title: const Text("Catalog App"),
+                        title: const Center(child: Text("Catalog App",)),
                       ),
+                      
               body: const Center(
                       child: Text("$msg All to $days days of Flutter by $name ."),
                     ),          
